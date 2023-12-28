@@ -8,9 +8,9 @@ License diagram.
 
 ```mermaid
 flowchart TD
-    A[You are choosing a license] -> B{For what?}
-    B -- using -->C[Understanding The Impact of Licenses];
-    B -- writing -->D[Choosing a license];
+    A[You are choosing a license] --> B{For what?};
+    B -- Using -->C[Understanding The Impact of Licenses];
+    B -- Writing -->D[Choosing a license];
 ```
 
 ## Explanations
