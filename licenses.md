@@ -7,11 +7,8 @@ Understanding licenses in the context of security is very difficult.  This diagr
 License diagram.
 
 ```mermaid
-graph LICENSES;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+graph L;
+    A--B;
 ```
 
 ## Explanations
