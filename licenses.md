@@ -7,9 +7,9 @@ Understanding licenses in the context of security is very difficult.  This diagr
 License diagram.
 
 ```mermaid
-graph L;
-    A["Test"]-->B["Testing"];
-    B-->C["Testifying"]
+flowchart TD
+    A-->B;
+    B-->C;
 ```
 
 ## Explanations
