@@ -8,7 +8,8 @@ License diagram.
 
 ```mermaid
 graph L;
-    A--B;
+    A["Test"]-->B["Testing"];
+    B-->C["Testifying"]
 ```
 
 ## Explanations
