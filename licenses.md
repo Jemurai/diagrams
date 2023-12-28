@@ -8,8 +8,8 @@ License diagram.
 
 ```mermaid
 flowchart TD
-    A-->B;
-    B-->C;
+    A["You are choosing a license" -- "using software" -->B["Understanding The Impact of Licenses";
+    A -- "writing software" -->C["Choosing a license"];
 ```
 
 ## Explanations
