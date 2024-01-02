@@ -10,15 +10,17 @@ A flow chart for understanding security standards.
 flowchart TD
     A[You are thinking about a standard] --> B{For what?};
     B -- Customer is asking --> C{Are you?};
-    B -- I just want great security and money cost is ok --> D{Healthcare?};
+    B -- I just want great security and higher cost is ok --> D{Healthcare?};
     D -- Yes --> E[HITRUST];
     D -- No --> F[NIST 800-53];
     C -- Customer specifies standard --> G{Is it worth it?};
     G -- Yes, revenue justifies --> H[Do the standard];
-    C -- > 250 people --> I[Watch *Distribution Toxic* like GPL];
-    C -- DoD --> J[Watch *Patent Toxic*];
-    C -- Just Go Fast --> K[Use OSS, Worry Later];
-    C -- > 10,000 --> L[Do SOC 2, ISO 27001, +others]
+    G -- No, not worth it --> M[Tell them and do alternative];
+    M --> I;
+    C -- < 250 people --> I[Consider NIST CSF or 800-53 maybe with securityprogram.io];
+    C -- < 1,000 people --> J[Use NIST 800-53 and do SOC 2];
+    C -- < 1,000 people with international --> K[ISO 27001];
+    C -- > 1,000 --> L[Hire people, Do SOC 2, ISO 27001, +others]
 ```
 
 ### Disclaimer
