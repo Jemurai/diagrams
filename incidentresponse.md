@@ -20,9 +20,9 @@ flowchart TD
     C -- No it is not real --> D[Track Event];
     D --> CloseEvent --> Improve;
     
-    C -- Yes, further investigation --> E[Response Team - Investigate];
-    E -- Investigate, Collect Evidence --> C;
-    C -- Yes, understood --> F[Track, Complete Tech Writeup];
+    C -- Yes further investigation --> E[Response Team - Investigate];
+    E -- Investigate Collect Evidence --> C;
+    C -- Yes understood --> F[Track, Complete Tech Writeup];
     
     F --> G[Management Response];
     G --> H{Impact};
@@ -45,10 +45,9 @@ flowchart TD
     CloseIncident --> Improve;
 
     Comms[Communications Plan];
-
-    Improve[Improve Processes If Possible]
-    CloseIncident[Close as Incident]
-    CloseEvent[Close as Event without Incident]
+    Improve[Improve Processes If Possible];
+    CloseIncident[Close as Incident];
+    CloseEvent[Close as Event without Incident];
 ```
 
 ### Notes
