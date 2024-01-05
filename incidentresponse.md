@@ -14,7 +14,7 @@ flowchart TD
     CloseIncident[Close as Incident];
     CloseEvent[Close as Event without Incident];
     Writeup[Complete Writeup];
-    
+
     Z[Support] --> A;
     Y[Customer] --> A;
     X[Hacker] --> A;
@@ -44,7 +44,7 @@ flowchart TD
     J --> Writeup;
     K --> Writeup;
     M --> Writeup;
-    % --> CloseIncident;
+    Writeup --> CloseIncident;
     H -- None --> Writeup;
     CloseIncident --> Improve;
 
