@@ -8,15 +8,20 @@ An example flow chart for incident response.
 
 ```mermaid
 flowchart TD
+    A[A Security Event Is Detected] --> B[Initial Triage];
+    Comms[Communications Plan];
+    Improve[Improve Processes If Possible];
+    CloseIncident[Close as Incident];
+    CloseEvent[Close as Event without Incident];
+    Writeup[Complete Writeup];
+    
     Z[Support] --> A;
     Y[Customer] --> A;
     X[Hacker] --> A;
     W[Security Team] --> A;
     V[Law Enforcement] --> A;
 
-    A[A Security Event Is Detected] --> B[Initial Triage];
     B --> C{Is it real};
-
     C -- No it is not real --> D[Track Event];
     D --> CloseEvent --> Improve;
     
@@ -30,12 +35,11 @@ flowchart TD
     H -- Customer Data --> Comms;
     H -- Internal Data --> Comms;
     Comms -- If Applicable --> I[Cyberinsurance];
-    Comms -- If applicable --> J[Law Enforcement];
-    Comms -- If applicable --> K[Customer Notifications];
+    Comms -- If Applicable --> J[Law Enforcement];
+    Comms -- If Applicable --> K[Customer Notifications];
     Comms --> L[Board Communications];
     Comms -- If Applicable --> M[Disclosure and Reporting];
 
-    Writeup[Complete Writeup];
     I --> Writeup;
     J --> Writeup;
     K --> Writeup;
@@ -44,10 +48,6 @@ flowchart TD
     H -- None --> Writeup;
     CloseIncident --> Improve;
 
-    Comms[Communications Plan];
-    Improve[Improve Processes If Possible];
-    CloseIncident[Close as Incident];
-    CloseEvent[Close as Event without Incident];
 ```
 
 ### Notes
