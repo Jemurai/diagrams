@@ -20,9 +20,9 @@ flowchart TD
     C -- No it is not real --> D[Track Event];
     D --> CloseEvent --> Improve;
     
-    C -- Yes further investigation --> E[Response Team - Investigate];
+    C -- Yes further investigation --> E[Response Team Investigate];
     E -- Investigate Collect Evidence --> C;
-    C -- Yes understood --> F[Track, Complete Tech Writeup];
+    C -- Yes understood --> F[Track Complete Tech Writeup];
     
     F --> G[Management Response];
     G --> H{Impact};
