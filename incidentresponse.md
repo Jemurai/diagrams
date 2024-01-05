@@ -15,40 +15,40 @@ flowchart TD
     V[Law Enforcement] --> A;
 
     A[A Security Event Is Detected] --> B[Initial Triage];
-    B --> C{Is it real?};
+    B --> C{Is it real};
 
-    C -- "No it is not real" --> D[Track Event];
-    D --> $ --> #;
+    C -- No it is not real --> D[Track Event];
+    D --> CloseEvent --> Improve;
     
-    C -- "Yes, further investigation" --> E[Response Team - Investigate];
+    C -- Yes, further investigation --> E[Response Team - Investigate];
     E -- Investigate, Collect Evidence --> C;
-    C -- "Yes, understood" --> F[Track, Complete Tech Writeup];
+    C -- Yes, understood --> F[Track, Complete Tech Writeup];
     
     F --> G[Management Response];
     G --> H{Impact};
-    H -- Legal --> ?;
-    H -- Customer Data --> ?;
-    H -- Internal Data --> ?;
-    ? -- If Applicable --> I[Cyberinsurance];
-    ? -- If applicable --> J[Law Enforcement];
-    ? -- If applicable --> K[Customer Notifications];
-    ? --> L[Board Communications];
-    ? -- If Applicable --> M[Disclosure / Reporting];
+    H -- Legal --> Comms;
+    H -- Customer Data --> Comms;
+    H -- Internal Data --> Comms;
+    Comms -- If Applicable --> I[Cyberinsurance];
+    Comms -- If applicable --> J[Law Enforcement];
+    Comms -- If applicable --> K[Customer Notifications];
+    Comms --> L[Board Communications];
+    Comms -- If Applicable --> M[Disclosure and Reporting];
 
-    %[Complete Writeup];
-    I --> %;
-    J --> %;
-    K --> %;
-    M --> %;
-    % --> !;
-    H -- None --> %;
-    ! --> #;
+    Writeup[Complete Writeup];
+    I --> Writeup;
+    J --> Writeup;
+    K --> Writeup;
+    M --> Writeup;
+    % --> CloseIncident;
+    H -- None --> Writeup;
+    CloseIncident --> Improve;
 
-    ?[Communications Plan];
+    Comms[Communications Plan];
 
-    #[Improve Processes If Possible]
-    ![Close as Incident]
-    $[Close as Event without Incident]
+    Improve[Improve Processes If Possible]
+    CloseIncident[Close as Incident]
+    CloseEvent[Close as Event without Incident]
 ```
 
 ### Notes
@@ -80,7 +80,7 @@ about an incident.  This is an example.  Every company will vary.
 ```mermaid
 flowchart TD
     A[Incident Communications];
-    A --> ![Customer] --> B{Customer Impacted?};
+    A --> ![Customer] --> B{Customer Impacted};
     B -- Yes --> C[Communications Based On Incident Detail];
     B -- No --> D[Handle Internally];
     C -- Known Impact --> E[Notification with Detail];
@@ -91,15 +91,15 @@ flowchart TD
 
     A --> L[Law Enforcement];
 
-    A --> %[Insurance];
-    % --> X{Large Loss} -- Yes --> C;
+    A --> Y[Insurance];
+    Y --> X{Large Loss} -- Yes --> C;
     X -- No --> B;
 
-    A --> *[Public];
-    * --> B;
+    A --> Z[Public];
+    Z --> B;
 
-    A --> $[Board];
-    $ --> $![Yes];
+    A --> W[Board];
+    W --> U[Yes];
 ```
 
 ### Ransoms
