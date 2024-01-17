@@ -8,6 +8,7 @@ A simple repo with diagrams for understanding interesting security questions.
 * [Choosing a Security Standard](standards.md)
 * [Incident Response Flow](incidentresponse.md)
 * [Vendor Management Flow](vendormanagement.md)
+* [Vuln Management Flow](vulnmanagement.md)
 
 ## Tricks
 

@@ -47,7 +47,6 @@ flowchart TD
     Writeup --> CloseIncident;
     H -- None --> Writeup;
     CloseIncident --> Improve;
-
 ```
 
 ### Notes
